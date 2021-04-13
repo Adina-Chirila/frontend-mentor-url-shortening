@@ -1,0 +1,56 @@
+header {
+	padding: 1.5em 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	margin-right: 2em;
+}
+
+.navbarContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	margin-right: 2em;
+}
+
+.navbar ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar ul li {
+	list-style: none;
+	margin-right: 2em;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: hsl(0, 0%, 65%);
+}
+
+.login {
+	color: hsl(0, 0%, 61%);
+	border: none;
+	cursor: pointer;
+	background-color: inherit;
+	margin-right: 2em;
+}
+
+.signUpBtn {
+	background-color: hsl(180, 66%, 49%);
+	color: hsl(0, 0%, 100%);
+	border: none;
+	padding: 0.25em 1.25em;
+	cursor: pointer;
+	padding: 0.4em 1em;
+	border-radius: 3em;
+}
+
+.signUpBtn:hover {
+	background-color: hsl(180, 77%, 54%);
+}
