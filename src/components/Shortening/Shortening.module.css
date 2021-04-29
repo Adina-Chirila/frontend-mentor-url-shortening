@@ -1,0 +1,58 @@
+.outerInput {
+	width: 80%;
+	/* background: no-repeat url("../../images/bg-boost-desktop.svg"); */
+	background-color: hsl(257, 27%, 26%);
+	padding: 2em;
+	border-radius: 0.5em;
+	position: absolute;
+	top: -3rem;
+}
+
+form {
+	display: flex;
+}
+
+.input {
+	width: 85%;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	border: none;
+}
+
+.input.error {
+	border: 1px solid tomato;
+}
+
+.input.error::placeholder {
+	color: tomato;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.submitBtn {
+	background-color: hsl(180, 66%, 49%);
+	color: hsl(0, 0%, 100%);
+	border: none;
+	padding: 0.25em 1.25em;
+	cursor: pointer;
+	padding: 0.6em 1.5em;
+	border-radius: 0.3em;
+	margin-left: auto;
+	width: 13%;
+}
+
+.submitBtn:hover {
+	background-color: hsl(180, 77%, 54%);
+}
+
+.submitBtn:disabled {
+	cursor: not-allowed;
+	background-color: rgb(199, 198, 198);
+}
+
+.submit,
+input {
+	font-size: 0.8rem;
+}

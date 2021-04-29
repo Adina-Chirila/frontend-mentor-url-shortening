@@ -1,0 +1,23 @@
+.statistics {
+	margin-top: 5rem;
+	background-color: #ececec;
+	padding-top: 7rem;
+	position: relative;
+}
+
+.statisticsContent {
+	margin-top: 3em;
+}
+
+.statisticsTitle {
+	text-align: center;
+	font-size: 2rem;
+	color: hsl(255, 11%, 22%);
+	margin-bottom: 0.2em;
+}
+
+.statisticsText {
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
