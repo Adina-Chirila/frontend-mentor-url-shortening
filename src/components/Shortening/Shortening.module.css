@@ -1,6 +1,6 @@
 .outerInput {
 	width: 80%;
-	/* background: no-repeat url("../../images/bg-boost-desktop.svg"); */
+	background: url("../../images/bg-boost-desktop.svg") no-repeat;
 	background-color: hsl(257, 27%, 26%);
 	padding: 2em;
 	border-radius: 0.5em;

@@ -1,0 +1,53 @@
+footer {
+	background-color: hsl(255, 11%, 22%);
+	padding: 2em 0;
+}
+
+.footerContainer {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*** Footer Navbar ***/
+.navbarBottom {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+
+.navbarBottom ul li {
+	color: white;
+	list-style: none;
+}
+
+.navbarBottom ul li:first-child {
+	margin-bottom: 0.5em;
+}
+
+.navbarBottom ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 0.7rem;
+	color: hsl(0, 0%, 75%);
+}
+
+.navbar ul li a:hover,
+.login:hover,
+.navbarBottom ul li a:hover,
+.socialMediaIcon:hover {
+	cursor: pointer;
+	color: hsl(180, 66%, 49%);
+}
+
+/*** Footer Social Media ***/
+.socialMediaIcon {
+	color: white;
+	font-size: 1.5rem;
+	margin-right: 1em;
+}
+
+.socialMediaIcon:last-child {
+	margin-right: 0;
+}
