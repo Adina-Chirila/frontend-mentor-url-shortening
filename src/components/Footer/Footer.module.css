@@ -33,6 +33,13 @@ footer {
 	color: hsl(0, 0%, 75%);
 }
 
+.navbar ul li a,
+.login,
+.navbarBottom ul li a,
+.socialMediaIcon {
+	transition: all 0.3s;
+}
+
 .navbar ul li a:hover,
 .login:hover,
 .navbarBottom ul li a:hover,

@@ -21,6 +21,10 @@ p {
 	color: hsl(0, 0%, 61%);
 }
 
+button {
+	transition: all 0.3s;
+}
+
 button:focus {
 	outline: none;
 }

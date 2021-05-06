@@ -51,6 +51,17 @@ header {
 	border-radius: 3em;
 }
 
+.navbar ul li a,
+.login {
+	transition: all 0.3s;
+}
+
 .signUpBtn:hover {
 	background-color: hsl(180, 77%, 54%);
+}
+
+.navbar ul li a:hover,
+.login:hover {
+	cursor: pointer;
+	color: hsl(180, 66%, 49%);
 }
