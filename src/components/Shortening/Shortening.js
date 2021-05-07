@@ -1,22 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ShorteningLoading from "../ShorteningLoading/ShorteningLoading";
 import styles from "./Shortening.module.css";
+import axios from "axios";
+import classNames from "classnames";
 
 const Shortening = () => {
-	const [menu, setMenu] = useState(false);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
 	const [inputValue, setInputValue] = useState("");
+	const [inputPlaceholder, setInputPlaceholder] = useState(
+		"Shorten a link here..."
+	);
+	const [error, setError] = useState(false);
 
-	// const fetchLink = async () => {
+	//should be places in useEffect?
+	const getData = (originalLink) => {
+		console.log("getData runs");
+		// if loading is true show loading circle
+		setLoading(true);
+		console.log("Loading...");
+		//disable submit button while loading
+		let url = `https://api.shrtco.de/v2/shorten?url=${originalLink}`;
 
-	// }
+		//while waiting show loading circle
 
-	// https://www.youtube.com/watch?v=a_7Z7C_JCyo&t=477s
-	// 1:57:00
-
-	useEffect(() => {
-		console.log("use effect runs");
-	}, []);
+		axios
+			.get(url)
+			.then((resp) => {
+				//hide loading circle
+				setLoading(false);
+				//enable submit button when the loading is finished
+				let shortenLink = resp.data.result.full_short_link;
+				//show results box
+				console.log(shortenLink);
+			})
+			.catch((err) => {
+				setLoading(false);
+				setError(true);
+				//enable submit button when there is an error
+				console.log(err);
+				//hide loading circle
+				//add error class to input
+			});
+	};
 
 	const handleChange = (e) => {
 		setInputValue(e.target.value);
@@ -24,8 +49,27 @@ const Shortening = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		let regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+
 		console.log("A name was submitted: " + inputValue);
+
+		if (!inputValue || !regex.test(inputValue)) {
+			console.log("function stopped");
+			setError(true);
+			setInputPlaceholder("Please enter a valid link...");
+			setInputValue("");
+
+			return;
+		}
+		setError(false);
+		getData(inputValue);
+		setInputValue("");
+		setInputPlaceholder("Shorten a link here...");
+
+		getData(inputValue);
 	};
+
+	const inputClasses = classNames(styles.input, error && styles.error);
 
 	return (
 		<>
@@ -33,14 +77,18 @@ const Shortening = () => {
 				<form onSubmit={handleSubmit}>
 					<input
 						type="text"
-						placeholder="Shorten a link here..."
-						className={styles.input}
+						placeholder={inputPlaceholder}
+						className={inputClasses}
 						value={inputValue}
 						onChange={handleChange}
 					/>
-					<button className={styles.submitBtn}>Shorten It!</button>
+					<button className={styles.submitBtn} disabled={loading}>
+						Shorten It!
+					</button>
 				</form>
 			</div>
+			{loading && <ShorteningLoading />}
+			{/* {loading? <ShorteningLoading />: <ShorteningResults/>} */}
 			{/* <ShorteningLoading isLoading={isLoading}/> */}
 		</>
 	);
