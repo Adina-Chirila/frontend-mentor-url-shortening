@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
-import heroImg from "../../images/illustration-working.svg";
+import heroImg from "images/illustration-working.svg";
 
 const HeroSection = () => {
 	return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./StatisticsBoxes.module.css";
-import recognitionImg from "../../images/icon-brand-recognition.svg";
-import recordsImg from "../../images/icon-detailed-records.svg";
-import customizableImg from "../../images/icon-fully-customizable.svg";
+import recognitionImg from "images/icon-brand-recognition.svg";
+import recordsImg from "images/icon-detailed-records.svg";
+import customizableImg from "images/icon-fully-customizable.svg";
 
 const StatisticsBoxes = () => {
 	const [boxesContent, setBoxesContent] = useState([
