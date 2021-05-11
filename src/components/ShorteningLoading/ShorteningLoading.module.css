@@ -1,0 +1,34 @@
+.loading {
+	margin-bottom: 2.5em;
+}
+
+.loadingDiv {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loadingText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loadingCircle {
+	width: 160px;
+	height: 160px;
+	fill: none;
+	stroke: #4b3f6b;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	stroke-dasharray: 250;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		stroke-dashoffset: 1000;
+	}
+}

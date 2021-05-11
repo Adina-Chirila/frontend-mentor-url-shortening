@@ -1,17 +1,18 @@
 import React from "react";
+import styles from "./ShorteningLoading.module.css";
 
 const ShorteningLoading = () => {
 	return (
-		<div className="shortenResults">
-			<div className="loading">
-				<div className="loadingDiv">
-					<svg className="loadingCircle">
+		<>
+			<div className={styles.loading}>
+				<div className={styles.loadingDiv}>
+					<svg className={styles.loadingCircle}>
 						<circle cx="80" cy="80" r="77"></circle>
 					</svg>
-					<p className="loadingText">Loading...</p>
+					<p className={styles.loadingText}>Loading...</p>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

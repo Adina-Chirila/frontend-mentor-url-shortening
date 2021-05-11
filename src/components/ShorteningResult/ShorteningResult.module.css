@@ -1,0 +1,56 @@
+.result {
+	padding: 0.5em 0;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5em 2em;
+	margin-bottom: 1em;
+	border-radius: 0.25em;
+	position: relative;
+}
+.result p {
+	font-size: 0.8rem;
+}
+
+.originalLink {
+	color: hsl(257, 27%, 26%);
+	display: inline-block;
+	max-width: 60%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+hr {
+	width: 100%;
+	display: none;
+}
+
+.copyBtn {
+	background-color: hsl(180, 66%, 49%);
+	color: hsl(0, 0%, 100%);
+	border: none;
+	padding: 0.25em 1.25em;
+	cursor: pointer;
+	padding: 0.6em 1.5em;
+	border-radius: 0.3em;
+	margin-left: auto;
+	width: 13%;
+	font-size: 0.8rem;
+	width: 6rem;
+}
+
+.copyBtn.copied {
+	background-color: hsl(257, 27%, 26%);
+}
+
+.copyBtn.copied:hover {
+	background-color: hsl(258, 26%, 39%);
+}
+
+.newLink {
+	color: hsl(180, 68%, 43%);
+	margin-left: auto;
+	margin-right: 1em;
+}
