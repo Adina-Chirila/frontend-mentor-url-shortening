@@ -15,20 +15,6 @@ const Shortening = () => {
 	const [links, setLinks] = useState([]);
 	const [error, setError] = useState(false);
 
-	// const createResultBox = (originalLink, shortenLink) => {
-	// 	return (
-	// 		<ShorteningResult originalLink={originalLink} shortenLink={shortenLink} />
-	// 		// <div className="result">
-	// 		// 	<p className="originalLink">{originalLink}</p>
-	// 		// 	<hr />
-	// 		// 	<p className="shortenLink">{shortenLink}</p>
-	// 		// 	<button className="copyBtn">Copy</button>
-	// 		// </div>
-	// 	);
-	// };
-
-	// <ShorteningResult originalLink={inputValue} shortenLink={ }/>
-
 	//should be places inside useEffect?
 	const getData = (originalLink) => {
 		console.log("getData runs");
@@ -49,16 +35,17 @@ const Shortening = () => {
 				let shortenLink = resp.data.result.full_short_link;
 				setShortenLink(shortenLink);
 
-				// let arr = [];
-				// let newArr = [...arr, shortenLink];
-				// console.log(newArr);
-				// setResultsList((resultsList) => [...resultsList, shortenLink]);
+				const id = new Date().getTime().toString();
+
 				setLinks([
 					...links,
-					{ originalLink: inputValue, newLink: shortenLink },
+					{
+						originalLink: inputValue,
+						newLink: shortenLink,
+						linkId: id,
+					},
 				]);
-				// setResultsList([...resultsList, shortenLink]);
-				// console.log(resultsList);
+
 				console.log(links);
 				// createResultBox(inputValue, shortenLink);
 

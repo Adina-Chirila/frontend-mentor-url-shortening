@@ -9,9 +9,6 @@
 	border-radius: 0.25em;
 	position: relative;
 }
-.result p {
-	font-size: 0.8rem;
-}
 
 .originalLink {
 	color: hsl(257, 27%, 26%);
@@ -31,12 +28,9 @@ hr {
 	background-color: hsl(180, 66%, 49%);
 	color: hsl(0, 0%, 100%);
 	border: none;
-	padding: 0.25em 1.25em;
 	cursor: pointer;
 	padding: 0.6em 1.5em;
 	border-radius: 0.3em;
-	margin-left: auto;
-	width: 13%;
 	font-size: 0.8rem;
 	width: 6rem;
 }

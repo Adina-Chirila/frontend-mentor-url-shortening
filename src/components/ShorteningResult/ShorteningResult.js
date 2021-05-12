@@ -1,40 +1,42 @@
+import { useState } from "react";
 import styles from "./ShorteningResult.module.css";
 import classNames from "classnames";
 
 const ShorteningResult = ({ links }) => {
-	const [copied, setCopied] = "";
+	const [copyLink, setCopyLink] = useState("");
+	const [copied, setCopied] = useState("");
 
-	const copyOnClipboard = () => {
-		navigator.clipboard.writeText(copied);
+	const handleCopyLink = (linkToCopy, linkId) => {
+		setCopyLink(linkToCopy);
+		navigator.clipboard.writeText(linkToCopy);
+		setCopied(linkId);
+		console.log(linkToCopy);
 	};
 
-	// const copyBtnClasses = classNames(styles.copyBtn, copied && styles.copied);
 	return (
 		<>
 			{links
-				? links.map((link, index) => (
-						<div key={index} className={styles.result}>
+				? links.map((link) => (
+						<div key={link.linkId} className={styles.result}>
 							<p className={styles.originalLink}>{link.originalLink}</p>
 							<hr />
 							<p className={styles.newLink}>{link.newLink}</p>
-							{/* <button className={copyBtnClasses}>Copy</button> */}
+
 							<button
-								className={styles.copyBtn}
-								onClick={() => console.log("copied")}
+								className={classNames(
+									styles.copyBtn,
+									copied === link.linkId ? styles.copied : null
+								)}
+								onClick={() => {
+									handleCopyLink(link.newLink, link.linkId);
+								}}
 							>
-								Copy
+								{copied === link.linkId ? "Copied" : "Copy"}
 							</button>
 						</div>
 				  ))
 				: null}
 		</>
-
-		// <div className="result">
-		// 	<p className="originalLink">{originalLink}</p>
-		// 	<hr />
-		// 	<p className="shortenLink">{shortenLink}</p>
-		// 	<button className="copyBtn">Copy</button>
-		// </div>
 	);
 };
 
