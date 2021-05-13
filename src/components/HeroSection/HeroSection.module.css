@@ -43,3 +43,31 @@
 .getStartedBtn:hover {
 	background-color: hsl(180, 77%, 54%);
 }
+
+@media only screen and (max-width: 1100px) {
+	.heroSection {
+		flex-direction: column-reverse;
+	}
+
+	.heroContent {
+		margin: 2em 0 0 0;
+		align-items: center;
+	}
+
+	.heroText,
+	.heroTitle {
+		text-align: center;
+	}
+
+	.heroTitle {
+		font-size: 2.5rem;
+		margin-bottom: 0.25em;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.heroTitle {
+		font-size: 1.7rem;
+		margin-bottom: 0.5em;
+	}
+}

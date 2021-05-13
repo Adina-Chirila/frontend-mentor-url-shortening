@@ -107,7 +107,7 @@ const Shortening = () => {
 					</button>
 				</form>
 			</div>
-			<div>
+			<div className={styles.resultsWrapper}>
 				{loading && <ShorteningLoading />}
 				{links && <ShorteningResult links={links} />}
 			</div>

@@ -52,3 +52,37 @@
 	font-weight: 500;
 	line-height: 2;
 }
+
+@media only screen and (max-width: 915px) {
+	.statisticsBoxes {
+		flex-direction: column;
+		margin-top: 5em;
+	}
+
+	.line {
+		transform: rotate(90deg);
+		transform-origin: center left;
+		left: 50%;
+		width: 550px;
+	}
+
+	.box {
+		margin-right: 0;
+		text-align: center;
+	}
+
+	.box:last-child {
+		margin: 4em 0;
+	}
+
+	.boxImg {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.line {
+		width: 600px;
+	}
+}

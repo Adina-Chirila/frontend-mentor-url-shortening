@@ -1,8 +1,10 @@
 header {
-	padding: 1.5em 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1.5em 0;
 }
 
 .logo {
@@ -14,7 +16,6 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	width: 90%;
-	margin-right: 2em;
 }
 
 .navbar ul {

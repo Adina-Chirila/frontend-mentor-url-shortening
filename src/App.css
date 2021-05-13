@@ -33,3 +33,16 @@ button:focus {
 	width: 80%;
 	margin: 0 auto;
 }
+
+@media only screen and (max-width: 915px) {
+	body {
+		font-size: 0.9rem;
+	}
+	button,
+	input {
+		font-size: 0.9rem;
+	}
+	form {
+		flex-wrap: wrap;
+	}
+}

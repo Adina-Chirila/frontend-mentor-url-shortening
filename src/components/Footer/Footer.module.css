@@ -58,3 +58,33 @@ footer {
 .socialMediaIcon:last-child {
 	margin-right: 0;
 }
+
+@media only screen and (max-width: 915px) {
+	.footerContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.navbarBottom {
+		width: 100%;
+		margin: 2em 0;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+}
+
+@media only screen and (max-width: 400px) {
+	.navbarBottom {
+		flex-direction: column;
+	}
+
+	.navbarBottom ul {
+		text-align: center;
+		margin-bottom: 2em;
+	}
+
+	.navbarBottom ul:last-child {
+		margin-bottom: 0;
+	}
+}
