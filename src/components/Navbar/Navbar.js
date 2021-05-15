@@ -1,12 +1,24 @@
-import React from "react";
+import { useState } from "react";
 import logo from "images/logo.svg";
 import styles from "./Navbar.module.css";
+import classNames from "classnames";
 
 const Navbar = () => {
+	const [showMenu, setShowMenu] = useState(false);
+
+	const menuBtnClasses = classNames(styles.menuBtn, showMenu && styles.open);
+	const mobileMenuClasses = classNames(
+		styles.navbarContainer,
+		showMenu && styles.open
+	);
+
 	return (
 		<header className={styles.fixed}>
 			<img src={logo} alt="logo" className={styles.logo} />
-			<div className={styles.navbarContainer}>
+			<div className={menuBtnClasses} onClick={() => setShowMenu(!showMenu)}>
+				<div className={styles.menuBtnBurger}></div>
+			</div>
+			<div className={mobileMenuClasses}>
 				<nav className={styles.navbar}>
 					<ul>
 						<li>
