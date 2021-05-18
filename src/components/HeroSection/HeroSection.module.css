@@ -1,6 +1,7 @@
 .heroSection {
 	display: flex;
 	align-items: center;
+	padding-top: 7rem;
 }
 
 .heroContent {

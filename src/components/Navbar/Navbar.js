@@ -14,27 +14,29 @@ const Navbar = () => {
 
 	return (
 		<header className={styles.fixed}>
-			<img src={logo} alt="logo" className={styles.logo} />
-			<div className={menuBtnClasses} onClick={() => setShowMenu(!showMenu)}>
-				<div className={styles.menuBtnBurger}></div>
-			</div>
-			<div className={mobileMenuClasses}>
-				<nav className={styles.navbar}>
-					<ul>
-						<li>
-							<a href="/features">Features</a>
-						</li>
-						<li>
-							<a href="/pricing">Pricing</a>
-						</li>
-						<li>
-							<a href="/resources">Resources</a>
-						</li>
-					</ul>
-				</nav>
-				<div className={styles.btnContainer}>
-					<button className={styles.login}>Login</button>
-					<button className={styles.signUpBtn}>Sign up</button>
+			<div className={styles.container}>
+				<img src={logo} alt="logo" className={styles.logo} />
+				<div className={menuBtnClasses} onClick={() => setShowMenu(!showMenu)}>
+					<div className={styles.menuBtnBurger}></div>
+				</div>
+				<div className={mobileMenuClasses}>
+					<nav className={styles.navbar}>
+						<ul>
+							<li>
+								<a href="/features">Features</a>
+							</li>
+							<li>
+								<a href="/pricing">Pricing</a>
+							</li>
+							<li>
+								<a href="/resources">Resources</a>
+							</li>
+						</ul>
+					</nav>
+					<div className={styles.btnContainer}>
+						<button className={styles.login}>Login</button>
+						<button className={styles.signUpBtn}>Sign up</button>
+					</div>
 				</div>
 			</div>
 		</header>
