@@ -17,24 +17,21 @@ const Shortening = () => {
 
 	//should be places inside useEffect?
 	const getData = (originalLink) => {
-		console.log("getData runs");
 		// if loading is true show loading circle
 		setLoading(true);
-		console.log("Loading...");
-		//disable submit button while loading
-		let url = `https://api.shrtco.de/v2/shorten?url=${originalLink}`;
 
-		//while waiting show loading circle
+		let url = `https://api.shrtco.de/v2/shorten?url=${originalLink}`;
 
 		axios
 			.get(url)
 			.then((resp) => {
 				//hide loading circle
 				setLoading(false);
-				//enable submit button when the loading is finished
+
 				let shortenLink = resp.data.result.full_short_link;
 				setShortenLink(shortenLink);
 
+				//generate unique id for every link added in input
 				const id = new Date().getTime().toString();
 
 				setLinks([
@@ -45,20 +42,13 @@ const Shortening = () => {
 						linkId: id,
 					},
 				]);
-
-				console.log(links);
-				// createResultBox(inputValue, shortenLink);
-
-				//show results box
-				console.log(shortenLink);
 			})
 			.catch((err) => {
+				//if error hide loading circle
 				setLoading(false);
+				//set error to true to add error class to input and enable submit button
 				setError(true);
-				//enable submit button when there is an error
 				console.log(err);
-				//hide loading circle
-				//add error class to input
 			});
 	};
 
@@ -71,21 +61,16 @@ const Shortening = () => {
 		let regex =
 			/(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
 
-		console.log("A name was submitted: " + inputValue);
-
 		if (!inputValue || !regex.test(inputValue)) {
-			console.log("function stopped");
 			setError(true);
 			setInputPlaceholder("Please enter a valid link...");
 			setInputValue("");
-
 			return;
 		}
 		setError(false);
 		getData(inputValue);
 		setInputValue("");
 		setInputPlaceholder("Shorten a link here...");
-
 		getData(inputValue);
 	};
 
@@ -97,6 +82,9 @@ const Shortening = () => {
 				<form onSubmit={handleSubmit}>
 					<input
 						type="text"
+						aria-required="true"
+						aria-label="url"
+						name="url"
 						placeholder={inputPlaceholder}
 						className={inputClasses}
 						value={inputValue}

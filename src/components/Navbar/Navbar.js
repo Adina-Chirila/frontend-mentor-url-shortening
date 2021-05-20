@@ -17,7 +17,10 @@ const Navbar = () => {
 			<div className={styles.container}>
 				<img src={logo} alt="logo" className={styles.logo} />
 				<div className={menuBtnClasses} onClick={() => setShowMenu(!showMenu)}>
-					<div className={styles.menuBtnBurger}></div>
+					<div
+						className={styles.menuBtnBurger}
+						aria-label={showMenu ? "close" : "open"}
+					></div>
 				</div>
 				<div className={mobileMenuClasses}>
 					<nav className={styles.navbar}>

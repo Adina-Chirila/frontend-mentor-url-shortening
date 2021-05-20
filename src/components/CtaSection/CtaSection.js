@@ -5,7 +5,7 @@ const CtaSection = () => {
 	return (
 		<section className={styles.ctaSection}>
 			<div className={styles.ctaSectionContainer}>
-				<h1>Boost your links today</h1>
+				<h3>Boost your links today</h3>
 				<button className={styles.getStartedBtn}>Get Started</button>
 			</div>
 		</section>
