@@ -1,0 +1,66 @@
+.pricingContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pricingTitle {
+    color: hsl(255, 11%, 22%);
+    padding-top: 2em;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.box {
+    padding: 2em 3em;
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 89%);
+    border-radius: 0.5em;
+}
+
+.box.featured {
+    border: 1px solid hsl(180, 66%, 49%);
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.box h2 span {
+    color: hsl(180, 66%, 49%);
+    font-size: 0.6rem;
+    position: absolute;
+}
+
+.box h3 {
+    color: hsl(180, 66%, 49%);
+    font-size: 2rem;
+}
+
+.box h3 span {
+    color: #000000;
+    font-size: 0.8rem;
+}
+
+.box p {
+    font-size: 0.9rem;
+    padding: 0.5em 0;
+}
+
+.getStartedBtn {
+    border: 2px solid hsl(180, 66%, 49%);
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.25em 1.25em;
+    cursor: pointer;
+    padding: 0.4em 1em;
+    border-radius: 3em;
+    margin: 1em 0;
+}
+
+.getStartedBtn:hover {
+    background-color: hsl(180, 77%, 54%);
+}
