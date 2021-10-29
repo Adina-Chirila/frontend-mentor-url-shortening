@@ -34,7 +34,7 @@ const Pricing = () => {
                 Get the most from your links
             </h1>
             <div className={styles.boxes}>
-                {pricingPlans.map((plan) => {
+                {pricingPlans.map((plan, index) => {
                     const {
                         title,
                         price,
@@ -44,7 +44,7 @@ const Pricing = () => {
                         reports,
                     } = plan;
                     return (
-                        <div className={styles.box}>
+                        <div className={styles.box} key={index}>
                             <h2>
                                 {title} <span>{featured && "POPULAR"}</span>
                             </h2>

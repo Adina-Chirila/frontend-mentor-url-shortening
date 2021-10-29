@@ -1,0 +1,38 @@
+.resourcesContainer {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.resourcesContainer ul {
+    margin-bottom: 1em;
+}
+
+.resourcesContainer ul li {
+    list-style: none;
+    padding: 1em 0;
+}
+
+.resourcesContainer ul li span {
+    color: hsl(0, 0%, 61%);
+}
+
+.resourcesContainer h1 {
+    padding: 2em 0;
+    color: hsl(255, 11%, 22%);
+}
+
+.resourcesContainer a {
+    background-color: hsl(180, 66%, 49%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    padding: 0.4em 1em;
+    border-radius: 3em;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2em 0;
+}
+
+.resourcesContainer a:hover {
+    background-color: hsl(180, 77%, 54%);
+}

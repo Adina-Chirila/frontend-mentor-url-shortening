@@ -22,7 +22,7 @@ function App() {
                     <Route path="/pricing">
                         <Pricing />
                     </Route>
-                    <Route path="/pricing">
+                    <Route path="/resources">
                         <Resources />
                     </Route>
                 </Switch>
